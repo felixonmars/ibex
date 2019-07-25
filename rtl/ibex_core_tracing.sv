@@ -50,6 +50,8 @@ module ibex_core_tracing #(
     input  logic        irq_external_i,
     input  logic [14:0] irq_fast_i,
     input  logic        irq_nm_i,       // non-maskeable interrupt
+    output logic        irq_ack_o,
+    output logic [4:0]  irq_ack_id_o,
 
     // Debug Interface
     input  logic        debug_req_i,
@@ -127,6 +129,8 @@ module ibex_core_tracing #(
     .irq_external_i,
     .irq_fast_i,
     .irq_nm_i,
+    .irq_ack_o,
+    .irq_ack_id_o,
 
     .debug_req_i,
 
